@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class employee{
+            #monthlybonus;
+            constructor(name,age,salary){
+                this.name=name;
+                this.salary=salary;
+                this.age=age;
+                this.#monthlybonus=2000;
+            }
+            #finalsalary(){
+                let finalsalary=this.salary + this.#monthlybonus;
+                console.log("your final salary is:"+ finalsalary);
+            }
+            // get getemployeeDetails(){
+            //     return (`your name is: ${this.name}, you are ${this.age} years old, your monthly salary is ${this.salary}`)
+            //     return this.#finalsalary();
+            // }
+            EmpDetails(){
+                // return(`your name is: ${this.name}, you are:${this.age} years old,your monthly salary is ${this.salary}`)
+                return this.#finalsalary();
+            }
+            
+        }
+        i= new employee("john",25,50000);
+        i.EmpDetails();
+        
+    </script>
+</body>
+</html>

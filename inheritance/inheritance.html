@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class person{
+            // #name;
+            // #age;
+            // #gender;
+            constructor (name,age,gender){
+            
+            this.age=age;
+            this.name=name;
+            this.gender=gender;
+
+}
+get Eat(){
+    console.log(`${this.name} is eating`);
+
+}
+get walk(){
+    console.log(`${this.name} is walking`);
+    
+}
+set name(name){
+    this.name=name;
+}
+set age(age){
+    this.age=age;
+}
+set gender(gender){
+    this.gender=gender;
+}
+}
+    class student extends person{
+        // #program;
+        // #studyYear;
+        constructor(name,age,gender,program,studyYear){
+            super(name,age,gender);
+            this.program=program;
+            this.studyYear=studyYear;
+
+        }
+        get study(){
+            console.log(`${this.name} is studying`);
+        }
+        get holdexam(){
+            console.log(`${this.studyYear} is my current study year`);
+        }
+    }
+    
+    y = new student("john",20,"male","Dvc","2nd year");
+    y.Eat;
+    y.walk;
+    y.holdexam;
+
+    class teacher extends person{
+        // #designation;
+        // #salary;
+        constructor(name,age,gender,designation,salary){
+            super(name,age,gender);
+            this.designation=designation;
+            this.salary=salary;
+
+        }
+        get teach(){
+            console.log(`${this.name} is teaching`);
+        }
+        get superviseexam(){
+            console.log(`${this.gender} is supervising`);
+        }
+    }
+    i= new teacher("teacher jake",32,"male","senior",50,000);
+    i.teach;
+    i.superviseexam;
+
+    class doctor extends person{
+        // #designation;
+        // #salary;
+        constructor(name,age,gender,designation,salary){
+            super(name,age,gender);
+            this.designation=designation;
+            this.salary=salary;
+
+        }
+        get checkup(){
+            console.log(`${this.name} is checking up`);
+        }
+        get prescribe(){
+            console.log(`${this.gender} is prescribing`);
+        }
+    }
+    j=new doctor("doctor doe",32,"male","junior",130000);
+    j.prescribe;
+    j.checkup;
+    </script>
+</body>
+</html>
